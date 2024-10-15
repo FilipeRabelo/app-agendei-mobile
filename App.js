@@ -1,13 +1,13 @@
-// import { Text, View } from 'react-native';
-// import { Button } from './src/components/button/button.jsx';
 
+import React from 'react';
 import Login from './src/screens/login/login.jsx';
+import Account from './src/screens/account/account.jsx';
 
 export default function App() {
   return (
     <>
-      <Login />
+      {/* <Login /> */}
+      <Account/>
     </>
   );
 }
-// <Button text='Isso é um teste -  Desabilitado'/> 

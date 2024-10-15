@@ -1,10 +1,10 @@
 import React from "react";
-import icon from '../../constants/icon';
-import { styles } from "./login.style";
+import icon from "../../constants/icon";
+import { styles } from "./account.style";
 import { Button } from "../../components/button/button";
 import { Text, View, Image, TextInput, TouchableOpacity } from "react-native";
 
-export default function Login() {
+export default function Account() {
   return (
     <View style={styles.container}>
       <View style={styles.containerLogo}>
@@ -12,6 +12,8 @@ export default function Login() {
       </View>
 
       <View>
+        <Text style={styles.textUser}>Cadastrar Usuário</Text>
+        <TextInput placeholder="Nome:" style={styles.input} />
         <TextInput placeholder="E-mail:" style={styles.input} />
 
         <TextInput
@@ -24,10 +26,10 @@ export default function Login() {
       </View>
 
       <View style={styles.footer}>
-        <Text style={styles.footerText}>Não tenho conta. </Text>
-        
+        <Text style={styles.footerText}>Já tenho conta! </Text>
+
         <TouchableOpacity>
-          <Text style={styles.footerLink}>Criar conta agora!</Text>
+          <Text style={styles.footerLink}>Fazer Login!</Text>
         </TouchableOpacity>
       </View>
     </View>

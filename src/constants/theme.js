@@ -2,12 +2,13 @@ const COLORs={
 
   red: '#DF5951',
   blue: '#0D6EFD',
-  white: "#FFFFFF",
+  white: '#FFFFFF',
   gray1: '#323434',
   gray2: '#717f7f',
-  gray3: '#e4e4e4',
-  gray4: '#f1f5f4'
-}
+  gray3: '#a0a0a0',
+  gray4: '#e4e4e4',
+  gray5: '#f1f5f4'
+};
 
 const FONT_SIZE = {
   
@@ -17,6 +18,6 @@ const FONT_SIZE = {
   lg: 18,
   xl: 32,
   xxl: 64
-}
+};
 
-export {COLORs, FONT_SIZE}
+export {COLORs, FONT_SIZE};
