@@ -5,11 +5,12 @@ export const styles = StyleSheet.create({
   container:{
     flex: 1,
     backgroundColor: COLORs.gray6,
-    padding: 9,
+    paddingHorizontal: 9,
+    paddingVertical: 15,
     flexDirection: 'row',
     alignContent: 'center',
 
-    borderWidth: 1,
+    borderWidth: 0.5,
     borderColor: COLORs.blueLight,
     borderRadius: 5,
     marginBottom: 11,
@@ -23,7 +24,7 @@ export const styles = StyleSheet.create({
 
   name:{
     fontWeight: 'bold',
-    fontSize: FONT_SIZE.md,
+    fontSize: FONT_SIZE.lg,
     color: COLORs.gray1,
     marginLeft: 10
   },

@@ -7,12 +7,12 @@ import icon from '../../constants/icon'
 export default function Profile() {
   return (
     <View style={styles.container}>
-
       <View>
         <Image source={icon.logo} style={styles.img} />
       </View>
 
       <View>
+        <Text style={styles.textH1}>Meu Perfil</Text>
         <View style={styles.item}>
           <Text style={styles.title}>Nome:</Text>
           <Text style={styles.text}>Filipe Rabelo</Text>
@@ -23,9 +23,6 @@ export default function Profile() {
           <Text style={styles.text}>filipe.teste@gmail.com</Text>
         </View>
       </View>
-
-
-
     </View>
-  )
+  );
 }

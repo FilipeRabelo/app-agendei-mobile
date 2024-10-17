@@ -1,7 +1,7 @@
 const COLORs={
 
   // red: '#DF5951',
-  red: '#FF0000',
+  red: '#DC143C',
   blue: '#0D6EFD',
   blueLight: 'rgba(13, 110, 253, 0.6)',
   white: '#FFFFFF',

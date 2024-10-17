@@ -6,7 +6,7 @@ export const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: COLORs.gray6,
     paddingHorizontal: 9,
-    paddingVertical: 13,
+    paddingVertical: 15,
     borderWidth: 0.5,
     borderColor: COLORs.blueLight,
     borderRadius: 5,
@@ -73,5 +73,5 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 
-  
+
 })
