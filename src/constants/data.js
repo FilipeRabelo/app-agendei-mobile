@@ -127,5 +127,15 @@ export const doctors_services = [
     id_service: 4,
     description: "Mamoplastia",
     price: 1700
+  },
+  {
+    id_service: 5,
+    description: "Massagem",
+    price: 1100
+  },
+  {
+    id_service: 6,
+    description: "Rinoplastia",
+    price: 1690
   }
 ];

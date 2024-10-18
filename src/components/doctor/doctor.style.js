@@ -5,7 +5,7 @@ export const styles = StyleSheet.create({
   container:{
     flex: 1,
     backgroundColor: COLORs.gray6,
-    paddingHorizontal: 9,
+    paddingHorizontal: 3,
     paddingVertical: 15,
     flexDirection: 'row',
     alignContent: 'center',
@@ -19,7 +19,6 @@ export const styles = StyleSheet.create({
   img:{
     width: 50,
     height: 50,
-
   },
 
   name:{

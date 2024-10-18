@@ -7,7 +7,7 @@ import Appointments from "../../components/appointments/appointments";
 export default function MyCalendar() {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Meus agendamentos</Text>
+      <Text style={styles.text}>Meus Agendamentos</Text>
 
       <FlatList
         data={appointments} // recebemos a lista do servidor - api

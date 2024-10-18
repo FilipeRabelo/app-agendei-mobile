@@ -38,6 +38,7 @@ export const styles = StyleSheet.create({
   contentData: {
     flex: 1,
     alignContent: 'center',
+    left: -3
   },
 
   icon: {

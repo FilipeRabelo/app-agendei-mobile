@@ -8,10 +8,6 @@ export default function Profile() {
   return (
     <View style={styles.container}>
       <View>
-        <Image source={icon.logo} style={styles.img} />
-      </View>
-
-      <View>
         <Text style={styles.textH1}>Meu Perfil</Text>
         <View style={styles.item}>
           <Text style={styles.title}>Nome:</Text>

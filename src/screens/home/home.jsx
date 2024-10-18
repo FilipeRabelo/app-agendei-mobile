@@ -1,6 +1,6 @@
 import React from "react";
-import { View, Text, FlatList } from "react-native";
 import { styles } from "./home.style";
+import { View, Text, FlatList } from "react-native";
 import { doctors } from "../../constants/data";
 import Doctor from "../../components/doctor/doctor.jsx";
 import icon from "../../constants/icon.js";
@@ -8,10 +8,10 @@ import icon from "../../constants/icon.js";
 export default function Home() {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Agende seus Serviços Médicos</Text>
+      <Text style={styles.text}>Agende seus Serviços</Text>
 
       <FlatList
-        data={doctors} // recebemos a lista do servidor - api
+        data={doctors}                          // recebemos a lista do servidor - api
         keyExtractor={(doc) => doc.id_doctor}
         showsVerticalScrollIndicator={false}
         renderItem={({ item }) => {
