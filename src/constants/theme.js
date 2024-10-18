@@ -4,6 +4,8 @@ const COLORs={
   red: '#DC143C',
   blue: '#0D6EFD',
   blueLight: 'rgba(13, 110, 253, 0.6)',
+  blueOpacity: 'rgba(13, 110, 253, 0.1)',
+  blueOpacity2: 'rgba(0, 0, 255, 0.1)',
   white: '#FFFFFF',
   gray1: '#323434',
   gray2: '#717f7f',
