@@ -5,20 +5,27 @@ import { Calendar, LocaleConfig } from "react-native-calendars";
 import { Picker } from "@react-native-picker/picker";
 import { ptBR } from "../../constants/calendar";
 import { Button } from "../../components/button/button";
-import { IosModalPicker } from "../../components/isoModalPicker/iosModalPicker";
+// import { IosModalPicker } from "../../components/isoModalPicker/iosModalPicker";
 
 LocaleConfig.locales["pt-br"] = ptBR; // importando minha configuração
 LocaleConfig.defaultLocale = "pt-br"; // usar por default o meu arquivo em pt-br
 
-export default function Schedule() {
+export default function Schedule(props) {
+  const id_doctor = props.route.params.id_doctor;
+  const id_service = props.route.params.id_service;
+
+  const [selectedHour, setSelectedHour] = useState("");
   const [selectedDate, setSelectedDate] = useState(
     new Date().toISOString().slice(0, 10)
   ); // new Date().toISOString().slice(0, 10) - para trazer a data de hoje ja selecionada e formatada
 
-  const [selectedHour, setSelectedHour] = useState("");
+  function CLickBooking() {
+    console.log(id_doctor, id_service, selectedDate, selectedHour);
+  }
 
   return (
     <View style={styles.container}>
+
       <View>
         <Calendar
           theme={styles.theme}
@@ -57,8 +64,9 @@ export default function Schedule() {
       </View>
 
       <View>
-        <Button text={"Confirmar Reserva"} />
+        <Button text={"Confirmar Reserva"} onPress={CLickBooking} />
       </View>
+      
     </View>
   );
 }

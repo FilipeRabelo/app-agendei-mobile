@@ -14,7 +14,10 @@ export default function Services(props) {       // consigo trazer os dados da ho
 
 
   function CLickServices(id_service) {
-    props.navigation.navigate('schedule');
+    props.navigation.navigate('schedule', {
+      id_doctor,                                      // passando p a tela de agendamento
+      id_service
+    });
   }
 
   return (
