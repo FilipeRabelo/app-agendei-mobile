@@ -8,14 +8,14 @@ import Profile from '../profile/profile';
 import icon from '../../constants/icon';
 import { Image } from 'react-native';
 
-import { NavigationContainer } from '@react-navigation/native';
+// import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs"; // estilo q estou trabalhando
 
 const Tab = createBottomTabNavigator();   // instanciando o createBottomTabNavigator
 
 export default function MyTabs() {
   return (
-    <NavigationContainer>
+    // <NavigationContainer>
       <Tab.Navigator>
         <Tab.Screen
           name="Home"
@@ -95,6 +95,6 @@ export default function MyTabs() {
           }}
         />
       </Tab.Navigator>
-    </NavigationContainer>
+    // </NavigationContainer>
   );
 }

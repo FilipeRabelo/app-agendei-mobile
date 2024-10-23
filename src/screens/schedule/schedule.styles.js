@@ -52,7 +52,8 @@ export const styles = StyleSheet.create({
   },
 
   picker: {
-    color: COLORs.blue, // Cor do texto no Picker
+    color: '#000000', // Cor do texto no Picker
+    fontWeight: 'bold'
   },
 })
 
