@@ -1,17 +1,17 @@
 // autenticado ou nao
-
-import React from "react";
+import React, { useContext } from "react";
 import RoutesPrivadas from "./routesPrivadas";
 import RoutesAbertas from "./routesAbertas";
 
-function Routes(){
+import { AuthContext } from "../context/auth";
 
-  const user = {
-    id_user: 1
-  }
-  
-  return(
-    user.id_user ? <RoutesPrivadas/> : <RoutesAbertas/>   // se user for autenticado vai para as rotas privadas
+function Routes() {
+
+  const { user } = useContext(AuthContext);   // lendo os dados do context
+
+  // verificando
+  return (
+    user.id_user ? <RoutesPrivadas /> : <RoutesAbertas />   // se user for autenticado vai para as rotas privadas
   )
 }
 

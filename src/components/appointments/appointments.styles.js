@@ -23,7 +23,7 @@ export const styles = StyleSheet.create({
   specialty: {
     fontWeight: 'bold',
     fontSize: FONT_SIZE.md,
-    color: COLORs.blueLight,
+    color: COLORs.blue,
     marginBottom: 4,
   },
 
@@ -32,7 +32,7 @@ export const styles = StyleSheet.create({
   content: {
     flexDirection: 'row',
     alignContent: 'center',
-    marginTop: 7
+    marginTop: 19
   },
 
   contentData: {
@@ -57,13 +57,15 @@ export const styles = StyleSheet.create({
 
   textCalendar: {
     fontSize: FONT_SIZE.sm,
-    color: COLORs.gray3,
+    fontWeight: 'bold',
+    color: COLORs.gray2,
     marginTop: 3.5,
   },
 
   textTime: {
     fontSize: FONT_SIZE.sm,
-    color: COLORs.gray3,
+    fontWeight: 'bold',
+    color: COLORs.gray2,
     marginTop: 3.5,
   },
 

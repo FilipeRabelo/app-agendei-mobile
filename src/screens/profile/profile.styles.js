@@ -8,6 +8,7 @@ export const styles = StyleSheet.create({
     backgroundColor: COLORs.white,
     padding: 21,
     marginBottom: 11,
+    justifyContent: 'space-between'
   },
 
   item: {
@@ -43,4 +44,8 @@ export const styles = StyleSheet.create({
     color: COLORs.gray1,
     marginTop: 9
   },
+
+  // btnLogout:{
+  //   marginTop: 19
+  // }
 })

@@ -31,7 +31,7 @@ export const styles = StyleSheet.create({
   specialty:{
     fontWeight: 'bold',
     fontSize: FONT_SIZE.md,
-    color: COLORs.blueLight,
+    color: COLORs.blue,
     marginLeft: 10
   },
 

@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { styles } from "./home.style";
-import { View, Text, FlatList } from "react-native";
-import { doctors } from "../../constants/data";
+import { Alert, View, Text, FlatList } from "react-native";
 import Doctor from "../../components/doctor/doctor.jsx";
+import api from "../../constants/api";
 
 export default function Home(props) {
+
+  const [doctors, setDoctors] = useState([]);
 
   function ClickDoctor(id_doctor, name, specialty, icon){
     props.navigation.navigate("services", {
@@ -13,8 +15,29 @@ export default function Home(props) {
       specialty,
       icon,
     });
-    console.log(id_doctor, name, specialty, icon);
+    // console.log(id_doctor, name, specialty, icon);
   }
+
+  async function LoadDoctors(){      // td vez q for executada, ela vai ate o servidor
+    try {
+      const response = await api.get("/doctors/"); // get na api para listar os medico cadastrados na api
+
+      if (response.data) {
+        // dados recebidos da api
+        setDoctors(response.data); // jogando para dentro do authContext o obj com os dados
+      }
+    } catch (error) {
+      if (error.response?.data.error) {
+        Alert.alert(error.response.data.error);
+      } else {
+        Alert.alert("Ocorreu um Error no login");
+      }
+    }
+  }
+
+  useEffect(() => {         // carregando a tela services
+    LoadDoctors()
+  }, []);
 
   return (
     <View style={styles.container}>

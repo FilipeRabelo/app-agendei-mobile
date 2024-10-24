@@ -1,14 +1,16 @@
 import React, { useState } from "react";
 import { styles } from "./schedule.styles";
-import { View, Text } from "react-native";
+import {Alert, View, Text } from "react-native";
 import { Calendar, LocaleConfig } from "react-native-calendars";
 import { Picker } from "@react-native-picker/picker";
 import { ptBR } from "../../constants/calendar";
 import { Button } from "../../components/button/button";
-// import { IosModalPicker } from "../../components/isoModalPicker/iosModalPicker";
+import api from "../../constants/api";
+
 
 LocaleConfig.locales["pt-br"] = ptBR; // importando minha configuração
 LocaleConfig.defaultLocale = "pt-br"; // usar por default o meu arquivo em pt-br
+
 
 export default function Schedule(props) {
   const id_doctor = props.route.params.id_doctor;
@@ -19,8 +21,33 @@ export default function Schedule(props) {
     new Date().toISOString().slice(0, 10)
   ); // new Date().toISOString().slice(0, 10) - para trazer a data de hoje ja selecionada e formatada
 
-  function CLickBooking() {
-    console.log(id_doctor, id_service, selectedDate, selectedHour);
+
+  async function CLickBooking() {
+    try {
+      const response = await api.post("/appointments", {
+        // faz um post da rota e passa os dados no corpo da req
+        id_doctor,
+        id_service,
+        booking_date: selectedDate,
+        booking_hour: selectedHour,
+      }); // get na api
+
+      if (response.data?.id_appointment) {   
+ 
+        Alert.alert('Agendamento realizado com sucesso!')
+        props.navigation.popToTop();
+      }
+
+    } catch (error) {
+      if (error.response?.data.error) {
+        // Alert.alert(error.response.data.error);
+        console.log(error.response.data.error);
+      } else {
+        Alert.alert(
+          "Ocorreu um Error ao realizar o Agendamento, Tente mais tarde"
+        );
+      }
+    }
   }
 
   return (

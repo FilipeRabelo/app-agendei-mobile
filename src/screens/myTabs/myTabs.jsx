@@ -16,85 +16,89 @@ const Tab = createBottomTabNavigator();   // instanciando o createBottomTabNavig
 export default function MyTabs() {
   return (
     // <NavigationContainer>
-      <Tab.Navigator>
-        <Tab.Screen
-          name="Home"
-          component={Home}
-          options={{
-            headerTitleAlign: "center",
-            headerTitle: () => {
-              return (
-                <Image source={icon.logo} style={{ width: 125, height: 29 }} />
-              );
-            },
-            tabBarShowLabel: false,
-            tabBarIcon: ({ focused }) => {
-              return (
-                <Image
-                  source={icon.home}
-                  style={{
-                    width: 35,
-                    height: 35,
-                    opacity: focused ? 1 : 0.3,
-                  }}
-                />
-              );
-            },
-          }}
-        />
+    <Tab.Navigator>
+      <Tab.Screen
+        name="Home"
+        component={Home}
+        options={{
+          headerTitleAlign: "center",
+          headerTitle: () => {
+            return (
+              <Image source={icon.logo} style={{ width: 125, height: 29 }} />
+            );
+          },
+          tabBarShowLabel: false,
+          unmountOnBlur: true,
+          tabBarIcon: ({ focused }) => {
+            return (
+              <Image
+                source={icon.home}
+                style={{
+                  width: 35,
+                  height: 35,
+                  opacity: focused ? 1 : 0.3,
+                }}
+              />
+            );
+          },
+        }}
+      />
 
-        <Tab.Screen
-          name="MyCalendar"
-          component={MyCalendar}
-          options={{
-            headerTitleAlign: "center",
-            headerTitle: () => {
-              return (
-                <Image source={icon.logo} style={{ width: 125, height: 29 }} />
-              );
-            },
-            tabBarShowLabel: false,
-            tabBarIcon: ({ focused }) => {
-              return (
-                <Image
-                  source={icon.calendar}
-                  style={{
-                    width: 35,
-                    height: 35,
-                    opacity: focused ? 1 : 0.3,
-                  }}
-                />
-              );
-            },
-          }}
-        />
+      <Tab.Screen
+        name="MyCalendar"
+        component={MyCalendar}
+        options={{
+          headerTitleAlign: "center",
+          headerTitle: () => {
+            return (
+              <Image source={icon.logo} style={{ width: 125, height: 29 }} />
+            );
+          },
+          tabBarShowLabel: false,
+          unmountOnBlur: true, // para remontar a tela
+          tabBarIcon: ({ focused }) => {
+            return (
+              <Image
+                source={icon.calendar}
+                style={{
+                  width: 35,
+                  height: 35,
+                  opacity: focused ? 1 : 0.3,
+                }}
+              />
+            );
+          },
+        }}
+      />
 
-        <Tab.Screen
-          name="Profile"
-          component={Profile}
-          options={{
-            headerTitleAlign: "center",
-            headerTitle: () => {
-              return (
-                <Image source={icon.logo} style={{ width: 125, height: 29 }} />
-              );
-            },
-            tabBarShowLabel: false,
-            tabBarIcon: ({ focused }) => {
-              return (
-                <Image
-                  source={icon.profile}
-                  style={{
-                    width: 35,
-                    height: 35,
-                    opacity: focused ? 1 : 0.3,
-                  }}
-                />
-              );
-            },
-          }}
-        />
-      </Tab.Navigator>
+      <Tab.Screen
+        name="Profile"
+        component={Profile}
+        options={{
+          headerTitleAlign: "center",
+          headerTitle: () => {
+            return (
+              <Image source={icon.logo} style={{ width: 125, height: 29 }} />
+            );
+          },
+          tabBarShowLabel: false,
+          unmountOnBlur: true,
+
+          tabBarIcon: ({ focused }) => {
+            return (
+              <Image
+                source={icon.profile}
+                style={{
+                  width: 35,
+                  height: 35,
+                  opacity: focused ? 1 : 0.3,
+                }}
+              />
+            );
+          },
+        }}
+      />
+    </Tab.Navigator>
     // </NavigationContainer>
   );
 }
